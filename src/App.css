@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Comme:wght@100..900&family=Hind+Guntur:wght@300;400;500;600;700&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Roboto Condensed", sans-serif; */
+  font-family: 'Comme', sans-serif;
+}
+.navSection {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #4059ad;
+  align-items: center;
+  color: white;
+  padding: 0 20px;
+  font-size: large;
+}
+
+.sideBarSection {
+  width: 100%;
+  max-width: 15%;
+  height: 95vh;
+  padding-top: 10px;
+  background-color: #f4b942;
+}
+.sideBarSection ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: medium;
+  cursor: pointer;
+}
+.collectionSection {
+  display: flex;
+}
+
+/* Login Section */
+.loginSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.registerSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.authForm label {
+  width: 100%;
+  max-width: 55%;
+  font-weight: 400;
+}
+
+.authForm {
+  width: 100%;
+  max-width: 50%;
+  margin-top: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+.authForm input {
+  width: 100%;
+  max-width: 55%;
+  height: 1.4rem;
+  height: 2rem;
+  font-size: medium;
+}
+
+/* firmSection AddFirm */
+.firmSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.tableForm {
+  width: 100%;
+  max-width: 50%;
+  margin-top: -100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid gray;
+  -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+
+.tableForm input {
+  width: 100%;
+  max-width: 55%;
+  height: 35px;
+  max-width: 85%;
+  margin-bottom: 10px;
+}
+
+.tableForm label {
+  width: 100%;
+  max-width: 85%;
+  font-weight: 600;
+}
+
+/* check box inputs */
+.checkInp {
+  width: 100%;
+  max-width: 85%;
+  display: flex;
+}
+
+.checkInp label {
+  width: 20%;
+}
+.inputsContainer {
+  width: 100%;
+  display: flex;
+}
+
+.checkboxContainer {
+  width: 100%;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkboxContainer label {
+  width: 100%;
+}
+
+.checkboxContainer input {
+  margin-left: -180px;
+}
+
+.checkboxContainer label {
+  font-size: small;
+}
+
+.regBoxContainer label {
+  font-size: small;
+}
+
+/* products table */
+
+.productSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-table {
+  width: 80vw;
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid rgb(128, 128, 128);
+  padding: 8px;
+}
+
+.product-table th {
+  text-align: left;
+  background-color: rgb(47, 77, 212);
+  color: white;
+}
+
+.deleteBtn {
+  color: red;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.errorSection {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.errorSection h1 {
+  font-size: 4rem;
+  color: red;
+}
+h3 {
+  color: #d7263d;
+}
+
+.button-24 {
+  background: #ff4742;
+  border: 1px solid #ff4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito, roboto, proxima-nova, 'proxima nova', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  margin-bottom: 20px;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ff4742;
+}
+
+.button-24:active {
+  opacity: 0.5;
+}
