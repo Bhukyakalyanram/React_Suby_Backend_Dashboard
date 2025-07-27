@@ -22,13 +22,16 @@ const LandingPage = () => {
     const loginToken = localStorage.getItem('loginToken');
     if (loginToken) {
       setShowLogOut(true);
+      setShowWelcome(true);
     }
   }, []);
 
   useEffect(() => {
     const firmName = localStorage.getItem('firmName');
-    if (firmName) {
+    const firmId = localStorage.getItem('firmId');
+    if (firmName || firmId) {
       setShowFirmTitle(false);
+      setShowWelcome(true);
     }
   }, []);
 
@@ -39,6 +42,7 @@ const LandingPage = () => {
     localStorage.removeItem('firmName');
     setShowLogOut(false);
     setShowFirmTitle(true);
+    setShowWelcome(false);
   };
 
   const showLoginHandler = () => {
@@ -49,6 +53,7 @@ const LandingPage = () => {
     setShowWelcome(false);
     setShowAllProducts(false);
   };
+
   const showRegisterHandler = () => {
     setShowRegister(true);
     setShowLogin(false);
@@ -57,6 +62,7 @@ const LandingPage = () => {
     setShowWelcome(false);
     setShowAllProducts(false);
   };
+
   const showFirmHandler = () => {
     if (showLogOut) {
       setShowRegister(false);
@@ -66,41 +72,41 @@ const LandingPage = () => {
       setShowWelcome(false);
       setShowAllProducts(false);
     } else {
-      alert('Please Login First to Add Firm');
+      alert('please login');
       setShowLogin(true);
     }
   };
   const showProductHandler = () => {
     if (showLogOut) {
-      setShowProduct(true);
       setShowRegister(false);
       setShowLogin(false);
       setShowFirm(false);
+      setShowProduct(true);
       setShowWelcome(false);
       setShowAllProducts(false);
     } else {
-      alert('Please Login First to Add Product');
+      alert('please login');
       setShowLogin(true);
     }
   };
   const showWelcomeHandler = () => {
-    setShowWelcome(true);
-    setShowProduct(false);
     setShowRegister(false);
     setShowLogin(false);
     setShowFirm(false);
+    setShowProduct(false);
+    setShowWelcome(true);
     setShowAllProducts(false);
   };
   const showAllProductsHandler = () => {
     if (showLogOut) {
-      setShowWelcome(false);
-      setShowProduct(false);
       setShowRegister(false);
       setShowLogin(false);
       setShowFirm(false);
+      setShowProduct(false);
+      setShowWelcome(false);
       setShowAllProducts(true);
     } else {
-      alert('Please Login First to see Products');
+      alert('please login');
       setShowLogin(true);
     }
   };
@@ -120,14 +126,12 @@ const LandingPage = () => {
             showAllProductsHandler={showAllProductsHandler}
             showFirmTitle={showFirmTitle}
           />
-          {showFirm && showLogOut && (
-            <AddFirm showProductHandler={showProductHandler} />
-          )}
-          {showLogin && <Login showWelcomeHandler={showWelcomeHandler} />}
-          {showRegister && <Register showLoginHandler={showLoginHandler} />}
+          {showFirm && showLogOut && <AddFirm />}
           {showProduct && showLogOut && <AddProduct />}
           {showWelcome && <Welcome />}
           {showAllProducts && showLogOut && <AllProducts />}
+          {showLogin && <Login showWelcomeHandler={showWelcomeHandler} />}
+          {showRegister && <Register showLoginHandler={showLoginHandler} />}
         </div>
       </section>
     </>
